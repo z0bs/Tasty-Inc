@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;900&display=swap");
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap'); */
+
+:root {
+  --base: orange;
+  --blend: rgba(255, 166, 0, 0.521);
+  --light: white;
+  --dim: grey;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(5, 0, 0, 0.877);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  align-items: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  height: 80vh;
+}
+
+header ul li {
+  display: inline-flex;
+  padding: 2em;
+  margin-left: 1em;
+}
+
+.hero-right {
+  width: 100%;
+}
+
+.hero-left p:nth-child(1) {
+  width: 65%;
+  border: 2px solid var(--base);
+  padding: 0.75em;
+  margin-bottom: 0.5em;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 55px;
+}
+
+.hero-text::after {
+  content: "";
+  display: block;
+  height: 10px;
+  background-color: var(--light);
+  width: 15%;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.hero span {
+  color: var(--base);
+}
+
+.hero-left .introduction {
+  line-height: 1.7;
+  font-size: 0.8rem;
+  margin: 2em 0.75em 2em 0.75em;
+}
+
+.hero form {
+  background-color: var(--light);
+  padding: 0.5em 0.75em;
+  margin-bottom: 0.75em;
+  border-radius: 50px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+.hero form input {
+  border: none;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.hero form .grab {
+  padding: 1.5em 3em;
+  border: none;
+  background: var(--base);
+  border-radius: 50px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.signup-btn {
+    padding: .75em;
+    background: transparent;
+    border: 1px solid var(--blend);
+    font-size: .75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 1em 5em;
+    transition: all 300ms ease-in-out;
+  }
+
+  header ul li a:hover {
+    cursor: pointer;
+
+    color: var(--base);
+  }
+
+  header ul li a:focus {
+    color: var(--dim);
+  }
+
+  .hero {
+    justify-content: center;
+    padding: 4em;
+  }
+
+  .hero-right,
+  .hero-left {
+    flex: 1;
+  }
+
+  .hero-left {
+    padding-right: 3em;
+  }
+
+  .hero-left p:nth-child(1) {
+    width: 40%;
+    margin: 0;
+  }
+
+  .hero-left .introduction {
+    font-size: 0.85rem;
+    margin: 2em 0;
+  }
+
+  .nav-list {
+    display: block;
+  }
+
+  .hero-text {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+
+  .hero form {
+    width: 50%;
+    display: block;
+  }
+}
